@@ -3,15 +3,15 @@ html {
 }
 
 #content {
-    background-color: #d3e5f2;
+    /*background-color: #d3e5f2;*/
     max-width: 40em;
     margin-left: auto;
     margin-right: auto;
 }
 
 #avatar {
-    width: 190px;
-    height: 190px;
+    /*width: 9em;*/
+    height: 154px;
     border-radius: 50%;
 }
 
@@ -23,8 +23,23 @@ html {
 .text-col {
     flex: 1;
     font-size: 24pt;
+    line-height: auto;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    border-bottom: 1px solid;
 }
 
 .image-col {
     flex: 0;
+}
+
+#name_home {
+    text-decoration: none;
+    color: #0074D9;
 }
