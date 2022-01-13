@@ -5,6 +5,7 @@ body {
     margin-right: auto;
     font-family: sans-serif;
     background-color: seashell;
+    text-rendering: optimizeLegibility;
 }
 
 header {
@@ -18,36 +19,32 @@ header {
 }
 
 #first_initial {
-    background: linear-gradient(90deg, seashell 95%, rgba(255,255,255,0) 100%);
+    /* TODO: fix this fade out shit */
+    background: linear-gradient(90deg, seashell 97%, rgba(255,255,255,0) 100%);
 
     position: relative;
     z-index: 1;
 }
 
 #last_name_hidden {
-    display: none;
     z-index: 0;
-
+    opacity: 0%;
+    transition: opacity 0.5s ease;
 }
 
 #name_home:hover #last_name_hidden {
     display: inline-block;
-
-
-    animation-name: show_name;
-    animation-duration: 1.0s;
-    animation-delay: 1ms;
-    animation-fill-mode: backwards;
+    opacity: 100%;
+    animation: show_name 1s ease 1ms backwards;
 }
 
 @keyframes show_name {
     from {
+        opacity: 100%;
         transform: translateX(-100%);
-        /* opacity: 0%; */
     }
     to {
         transform: translateX(0);
-        /* opacity: 100%; */
     }
 }
 
