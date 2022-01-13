@@ -4,7 +4,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-family: sans-serif;
-    background-color: rgb(247, 241, 228);
+    background-color: seashell;
 }
 
 header {
@@ -17,9 +17,43 @@ header {
     justify-content: space-between;
 }
 
-#name_home {
-    text-decoration: none;
+#first_initial {
+    background: linear-gradient(90deg, seashell 95%, rgba(255,255,255,0) 100%);
+
+    position: relative;
+    z-index: 1;
+}
+
+#last_name_hidden {
+    display: none;
+    z-index: 0;
+
+}
+
+#name_home:hover #last_name_hidden {
+    display: inline-block;
+
+
+    animation-name: show_name;
+    animation-duration: 1.0s;
+    animation-delay: 1ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes show_name {
+    from {
+        transform: translateX(-100%);
+        /* opacity: 0%; */
+    }
+    to {
+        transform: translateX(0);
+        /* opacity: 100%; */
+    }
+}
+
+a {
     color: #0074D9;
+    text-decoration: none;
 }
 
 #pages a {
@@ -27,9 +61,15 @@ header {
     font-size: 16px;
 }
 
+#pages a:hover {
+    background-color: hotpink;
+    color: seashell;
+    font-size: 16px;
+}
+
 main {
     text-align: left;
-    margin-left: 1em;
+    margin: 1em;
 }
 
 .snow {
